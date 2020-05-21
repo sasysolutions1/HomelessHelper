@@ -1,0 +1,47 @@
+
+  <ion-toolbar color="primary">
+ 
+    <ion-title>Homeless Helper</ion-title>
+      
+  </ion-toolbar>
+
+
+<ion-content class="padding">
+    <ion-card>
+        <ion-card-header>
+            <ion-card-title>Register New Account</ion-card-title>
+        </ion-card-header>
+        <ion-item>
+            <ion-label position="floating" >Email:</ion-label>
+            <ion-input type="email" [(ngModel)]="email"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating" >Username:</ion-label>
+            <ion-input type="text" [(ngModel)]="username"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating" >Phone Number:</ion-label>
+            <ion-input type="text" [(ngModel)]="phone"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Password:</ion-label>
+            <ion-input type="password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Confirm Password:</ion-label>
+            <ion-input type="password" [(ngModel)]="passwordConfirm"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-checkbox [(ngModel)]="checkBox" color="primary" slot="start"></ion-checkbox>
+            By checking this box I certify that I am at least 18 years of age
+        </ion-item>
+        
+        <ion-button  color="primary" expand="full" (click)="register()">REGISTER</ion-button>
+      
+        
+       <ion-card-subtitle style="margin-top: 20px">Already have an account? <ion-button color="primary" expand="full" (click)="showLogin()">Login</ion-button></ion-card-subtitle>
+
+       <ion-card-subtitle style="margin-top: 20px"> <ion-button color="primary" expand="full" (click)="helpShow()">Support</ion-button>
+       </ion-card-subtitle>
+    </ion-card>
+</ion-content>
